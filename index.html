@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>L-Bar Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header
+      id="adminBar"
+      class="
+        grid-flex
+        wide
+        pad-3-sides pad-2-top pad-2-bottom
+        bgr-dark-slate
+        text-white
+        grid-align-center
+      "
+    >
+      <div
+        id="toggleMenu"
+        class="l-hidden clickable pad-2-right relative"
+        style="top: 3px"
+        aria-label="Open the menu"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+        aria-controls="adminNav"
+      >
+        <svg viewBox="0 0 100 80" width="22" height="22">
+          <rect fill="#fff" width="100" height="10"></rect>
+          <rect fill="#fff" y="30" width="100" height="10"></rect>
+          <rect fill="#fff" y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <div class="pad-vert">
+        <div>The Organization Name</div>
+      </div>
+      <div class="flex-grow grid-flex grid-justify-end grid-align-center">
+        <div>
+          <div id="notificationsBell" class="text-right relative">
+            <a href="#" id="openNotifications" style="pointer-events: auto">
+              <img src="./images/icon/icon-bell.png" width="24" height="24" />
+              <span
+                class="
+                  notification-count
+                  absolute
+                  bold
+                  bgr-ltgray
+                  circle
+                  text-black text-center text-11
+                "
+                style="top: -6px; right: -6px; width: 15px"
+                >1</span
+              >
+            </a>
+          </div>
+        </div>
+        <div class="pad-4-left">
+          <div class="inlineblock relative">
+            <div
+              class="
+                header-profile-circle
+                circle
+                bgr-ltgray
+                text-center
+                clickable
+              "
+              style="height: 32px; width: 32px"
+            >
+              <span
+                class="text-16 lineheight1 relative text-black"
+                style="font-size: 16px; top: 5px"
+                >RA</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="grid-flex flex-grow relative">
+      <nav
+        id="adminNav"
+        class="
+          flex flex-col
+          bgr-white
+          borderright
+          s-hidden
+          m-hidden
+          s-absolute-tl
+          m-absolute-tl
+          s-tall
+          m-tall
+          s-borderbottom
+          m-borderbottom
+          relative
+        "
+        style="
+          z-index: 9999;
+          transition: width 0.25s ease-in-out 0s;
+          min-height: 700px;
+          width: 272px;
+        "
+      >
+        <div
+          id="toggleAdminNav"
+          class="
+            inlineblock
+            bgr-white
+            circle
+            absolute
+            text-center
+            clickable
+            border border-lite
+            m-hidden
+            s-hidden
+            rotate180
+            relative
+            front
+          "
+          style="
+            height: 24px;
+            width: 24px;
+            top: 14px;
+            right: -13px;
+            transition: transform 0.25s ease-in-out;
+          "
+        >
+          <img
+            src="./images/icon/icon-chevron-r-black.svg"
+            alt="Toggle Admin Nav"
+            width="12"
+            height="12"
+            class="relative"
+            style="opacity: 0.75"
+          />
+        </div>
+        <div
+          id="adminNavLinks"
+          class="relative tall"
+          style="transition: all 0.25s ease-in-out 0s; left: 0px; opacity: 1"
+        >
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Dashboard.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Dashboard</span>
+            </a>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Settings.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Settings</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Settings sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Global</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Communications</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Auction</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Donations</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Close &amp; Wrap Up</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Design.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Design</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Design sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Style and Color</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Interactions</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Pages.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Pages</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Pages sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Home Page</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Custom</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Custom with Order Form</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Presentation Page</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Tickets.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Tickets</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Tickets sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Settings</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Ticket Orders</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Seating Management</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Donation.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Donation</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Donation sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Settings</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Donation Items</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Auction.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Auction</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Auction sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Auction</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Items Management</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Silent</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Live Auction</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Items for Purchase.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Items for Purchase</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Items for Purchase sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Instant</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Raffle</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Vote</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Users.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Users</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Users sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Settings</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Details</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Check-In</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Checkout</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Orders.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Orders</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Orders sub menu"
+                width="16"
+                height="16"
+              />
+            </div>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Settings</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Checkout</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Communications</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Communications.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Communications</span>
+
+              <img
+                class="absolute rotate90 clickable admin-nav-submenu-toggle"
+                style="
+                  top: 16px;
+                  right: 16px;
+                  transition: transform 0.25s ease-in-out;
+                "
+                src="./images/icon/icon-chevron-r-black.svg"
+                alt="Open Communications sub menu"
+                width="16"
+                height="16"
+              />
+            </a>
+
+            <div
+              class="admin-nav-submenu overflow-hidden"
+              style="height: 0; transition: height 0.25s ease-in-out"
+            >
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Email Drafts</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Text Drafts</a
+              >
+
+              <a
+                href="#"
+                class="
+                  block
+                  pad pad-5-left
+                  text-15
+                  bgr-lite
+                  hover-dark
+                  text-black text-dec-none
+                "
+                >Chat</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Reports.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Reports</span>
+            </a>
+          </div>
+
+          <div>
+            <a
+              href="#"
+              class="
+                block
+                pad-2-top pad-2-bottom
+                relative
+                text-dec-none text-black
+              "
+              style="padding-left: 42px"
+            >
+              <img
+                class="absolute"
+                style="top: 12px; left: 10px"
+                width="28"
+                height="28"
+                src="./images/icon/nav/Help.svg"
+                alt=""
+              />
+              <span class="admin-nav-text">Help</span>
+            </a>
+          </div>
+
+          <div class="wide pad-5-top pad-3-bottom text-center">
+            <img
+              width="160"
+              height="auto"
+              src="./images/cb-givesmart-logo-c-rgb-bycb.svg"
+              alt="GiveSmart by Community Brands"
+            />
+          </div>
+        </div>
+      </nav>
+      <main class="flex flex-grow relative pad-4-bottom s-pad-0 bgr-lite">
+        <div class="wide pad-7-top pad-5-bottom text-18 text-center">
+          Main content is here...
+        </div>
+      </main>
+    </div>
+    <footer class="pad-4 bordertop bgr-lite-2">
+      <div class="wide pad-4 text-center">Footer is here...</div>
+    </footer>
+  </body>
+</html>

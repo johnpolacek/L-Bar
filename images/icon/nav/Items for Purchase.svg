@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>L-Bar / Icon / Dark / Items</title>
+    <g id="L-Bar-/-Icon-/-Dark-/-Items" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconfinder_price_tag_172526" transform="translate(4.000000, 6.000000)">
+            <rect id="Rectangle-path" x="0" y="0" width="20" height="20"></rect>
+            <path d="M18.8,2.2 C18.8,1.6476 18.3524,1.2 17.8,1.2 C17.7376,1.2 11.8496,1.2008 11.8496,1.2008 C11.3176,1.2008 10.8084,1.1728 10.5132,1.468 L1.4216,10.5592 C1.126,10.8544 1.126,11.3336 1.4216,11.6288 L8.3712,18.5784 C8.6664,18.8736 9.1456,18.8736 9.4408,18.5784 L18.532,9.4868 C18.8272,9.192 18.7992,8.6948 18.7992,8.1508 C18.7992,8.1508 18.8,2.2624 18.8,2.2 Z" id="Shape" stroke="#353643" fill="#353643" stroke-linecap="round"></path>
+            <circle id="Oval" stroke="#F4F5F7" stroke-linecap="round" cx="15.6" cy="4.4" r="1.2"></circle>
+        </g>
+    </g>
+</svg>

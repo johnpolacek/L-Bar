@@ -1,0 +1,16 @@
+{
+  "name": "l-bar",
+  "version": "0.1.0",
+  "description": "L-Bar Navigation Menu",
+  "main": "index.html",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,md,html,css}\"",
+    "format-watch": "npm run format && onchange \"**/*.{js,jsx,json,md,html,css}\" -- prettier --write {{changed}}"
+  },
+  "author": "John Polacek",
+  "license": "ISC",
+  "dependencies": {
+    "onchange": "^7.1.0",
+    "prettier": "^2.3.1"
+  }
+}
