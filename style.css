@@ -151,134 +151,134 @@ body {
 
 /* padding */
 .pad {
-  padding: 0.5em;
+  padding: 0.6rem;
 }
 .pad-left {
-  padding-left: 0.5em;
+  padding-left: 0.6rem;
 }
 .pad-right {
-  padding-right: 0.5em;
+  padding-right: 0.6rem;
 }
 .pad-top {
-  padding-top: 0.5em;
+  padding-top: 0.6rem;
 }
 .pad-bottom {
-  padding-bottom: 0.5em;
+  padding-bottom: 0.6rem;
 }
 .pad-sides {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 }
 .pad-vert {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 .pad-2 {
-  padding: 1em;
+  padding: 1.2rem;
 }
 .pad-2-sides {
-  padding: 0 1em;
+  padding: 0 1.2rem;
 }
 .pad-2-right {
-  padding-right: 1em;
+  padding-right: 1.2rem;
 }
 .pad-2-left {
-  padding-left: 1em;
+  padding-left: 1.2rem;
 }
 .pad-2-vert {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
 }
 .pad-2-top {
-  padding-top: 1em;
+  padding-top: 1.2rem;
 }
 .pad-2-bottom {
-  padding-bottom: 1em;
+  padding-bottom: 1.2rem;
 }
 .pad-3 {
-  padding: 1.5em;
+  padding: 1.8rem;
 }
 .pad-3-top {
-  padding-top: 1.5em;
+  padding-top: 1.8rem;
 }
 .pad-3-left {
-  padding-left: 1.5em;
+  padding-left: 1.8rem;
 }
 .pad-3-sides {
-  padding-right: 1.5em;
-  padding-left: 1.5em;
+  padding-right: 1.8rem;
+  padding-left: 1.8rem;
 }
 .pad-3-bottom {
-  padding-bottom: 1.5em;
+  padding-bottom: 1.8rem;
 }
 .pad-4 {
-  padding: 2em;
+  padding: 2.4rem;
 }
 .pad-4-sides {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 .pad-4-vert {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
 }
 .pad-4-bottom {
-  padding-bottom: 2em;
+  padding-bottom: 2.4rem;
 }
 .pad-4-top {
-  padding-top: 2em;
+  padding-top: 2.4rem;
 }
 .pad-4-left {
-  padding-left: 2em;
+  padding-left: 2.4rem;
 }
 .pad-4-right {
-  padding-right: 2em;
+  padding-right: 2.4rem;
 }
 .pad-5 {
-  padding: 2.5em;
+  padding: 3.6rem;
 }
 .pad-5-sides {
-  padding-left: 2.5em;
-  padding-right: 2.5em;
+  padding-left: 3.6rem;
+  padding-right: 3.6rem;
 }
 .pad-5-vert {
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
+  padding-top: 3.6rem;
+  padding-bottom: 3.6rem;
 }
 .pad-5-bottom {
-  padding-bottom: 2.5em;
+  padding-bottom: 3.6rem;
 }
 .pad-5-top {
-  padding-top: 2.5em;
+  padding-top: 3.6rem;
 }
 .pad-5-left {
-  padding-left: 2.5em;
+  padding-left: 3.6rem;
 }
 .pad-5-right {
-  padding-right: 2.5em;
+  padding-right: 3.6rem;
 }
 .pad-7-top {
-  padding-top: 10em;
+  padding-top: 7.2rem;
 }
 .pad-half {
-  padding: 0.25em;
+  padding: 0.25rem;
 }
 .pad-half-sides {
-  padding-left: 0.25em;
-  padding-right: 0.25em;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pad-half-vert {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .pad-half-top {
-  padding-top: 0.25em;
+  padding-top: 0.25rem;
 }
 .pad-half-bottom {
-  padding-bottom: 0.25em;
+  padding-bottom: 0.25rem;
 }
 .pad-half-left {
-  padding-left: 0.25em;
+  padding-left: 0.25rem;
 }
 
 /* colors */
